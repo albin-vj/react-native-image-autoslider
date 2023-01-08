@@ -1,0 +1,30 @@
+{
+  "name": "react-native-image-autoslider",
+  "version": "1.0.0",
+  "description": "simple javascript image slider for react native apps!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albindev007/react-native-image-autoslider.git"
+  },
+  "keywords": [
+    "image-slider",
+    "image-auto-slider",
+    "react-native",
+    "image-list-slider",
+    "infinite-list",
+    "react"
+  ],
+  "author": "albindev007",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/albindev007/react-native-image-autoslider/issues"
+  },
+  "homepage": "https://github.com/albindev007/react-native-image-autoslider#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.73.7"
+  }
+}
