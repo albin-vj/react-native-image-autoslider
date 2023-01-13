@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-autoslider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple javascript image slider for react native apps!",
   "main": "index.js",
   "scripts": {
