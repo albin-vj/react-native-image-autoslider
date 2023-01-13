@@ -111,6 +111,7 @@ export const ImageAutoSlider = (props) => {
           <TouchableOpacity
             onPress={() => {
               stopAutoPlay();
+              if(typeof props.positiveClick === 'function')
               props.positiveClick(item);
             }}
             style={{
