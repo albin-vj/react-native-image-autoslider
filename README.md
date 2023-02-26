@@ -47,6 +47,10 @@ import { ImageAutoSlider }  from 'react-native-image-autoslider';
 * borderColor	- string, child item border colour if selectedItem true	#A9A9A9
 * selectedItem	- string, highlight an item	null
 * positiveClick	- func, callback for image item click	null
+* hideDot	- bool, to enable/disable dot section	null
+* dotStyle	- object, custom style for dots	null
+* dotActiveColor	- string, dot active color	black
+* dotInActiveColor	- string, dot inactive color	gray
 
 
 ## Future release

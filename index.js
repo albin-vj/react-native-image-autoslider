@@ -15,7 +15,7 @@ let IntervalTime = 8000;
 let stop = 0;
 
 export const ImageAutoSlider = (props) => {
-  const { hideShot, dataArray, disableAutoSlide, dotStyle, dotInActiveColor, dotActiveColor } = props;
+  const { hideDot, dataArray, disableAutoSlide, dotStyle, dotInActiveColor, dotActiveColor } = props;
   IntervalTime = props.intervalTime ?? 8000;
   const [sliderIndex, setSliderIndex] = React.useState(0);
   const black = "#000000";
@@ -142,7 +142,7 @@ export const ImageAutoSlider = (props) => {
         )}
       />
 
-      {!hideShot?<FlatList
+      {!hideDot?<FlatList
         data={dataArray}
         horizontal={true}
         extraData={sliderIndex}
@@ -190,7 +190,7 @@ ImageAutoSlider.propTypes = {
   borderColor: PropTypes.string,
   selectedItem: PropTypes.string,
   positiveClick: PropTypes.func,
-  hideShot: PropTypes.bool,
+  hideDot: PropTypes.bool,
   dotStyle: PropTypes.object,
   dotActiveColor: PropTypes.string,
   dotInActiveColor: PropTypes.string
