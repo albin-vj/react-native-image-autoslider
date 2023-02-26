@@ -15,8 +15,7 @@ let IntervalTime = 8000;
 let stop = 0;
 
 export const ImageAutoSlider = (props) => {
-  const dataArray = props.dataArray;
-  const disableAutoSlide = props.disableSlide;
+  const { hideShot, dataArray, disableAutoSlide, dotStyle, dotInActiveColor, dotActiveColor } = props;
   IntervalTime = props.intervalTime ?? 8000;
   const [sliderIndex, setSliderIndex] = React.useState(0);
   const black = "#000000";
@@ -143,7 +142,7 @@ export const ImageAutoSlider = (props) => {
         )}
       />
 
-      <FlatList
+      {!hideShot?<FlatList
         data={dataArray}
         horizontal={true}
         extraData={sliderIndex}
@@ -159,17 +158,18 @@ export const ImageAutoSlider = (props) => {
             }}
           >
             <View
-              style={{
+              style={[dotStyle??{
                 borderRadius: 3,
                 marginVertical: 5,
                 height: 6,
                 width: 6,
-                backgroundColor: index == sliderIndex ? black : darkGray,
-              }}
+              },{
+                backgroundColor: index == sliderIndex ? dotActiveColor?dotActiveColor:black : dotInActiveColor?dotInActiveColor:darkGray,
+              }]}
             />
           </View>
         )}
-      />
+      />:null}
     </View>
   );
 };
@@ -190,4 +190,8 @@ ImageAutoSlider.propTypes = {
   borderColor: PropTypes.string,
   selectedItem: PropTypes.string,
   positiveClick: PropTypes.func,
+  hideShot: PropTypes.bool,
+  dotStyle: PropTypes.object,
+  dotActiveColor: PropTypes.string,
+  dotInActiveColor: PropTypes.string
 };
